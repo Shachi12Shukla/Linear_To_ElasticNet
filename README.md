@@ -8,7 +8,7 @@ This project predicts the Fire Weather Index (FWI) for Algerian forest regions u
 ### Huge Credit to Krish Naik Sir. This project was completed by following Krish Naik Sir’s comprehensive Udemy course on machine learning , DL , NLP .
 - **Instructor** - (https://github.com/krishnaik06)
 - **Dataset Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/547/algerian+forest+fires+dataset)
--
+
 
 ## Data Set Information
 
@@ -54,7 +54,7 @@ The dataset includes 244 instances regrouping data from two regions of Algeria:
 
 1. **Pie Chart:**  
    Distribution of 'classes' (fire and not fire)  
-   ![classes.png](classes.png)
+   ![classes_plot.png](classes_plot.png)
 
 2. **Correlation Heatmap:**  
    Shows correlation between features  
