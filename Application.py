@@ -8,11 +8,10 @@ st.title("🔥 Fire Weather Index (FWI) Prediction")
 st.header("📥 Input Weather and Region Features")
 
 ## Load Models 
-with open('scaler.pkl' , 'rb') as file1:
-    scaler_model = pickle.load(file1)
-
-with open('ridge.pkl' , 'rb') as file2:
-    ridge_model = pickle.load(file2)
+with open('scaler.pkl', 'rb') as f:
+    scaler = pickle.load(f)
+with open('ridge.pkl', 'rb') as f:
+    ridge = pickle.load(f)
 
 ## Take Inputs
 temp = st.number_input("temperature ", step = 1, min_value= 22 , max_value= 42)
@@ -39,13 +38,14 @@ region_encoded = 1 if region == 'Bejaia Region' else 0
 features = np.array([[temp , RH , ws , rain , FFMC , DMC , ISI , classes , region_encoded]])
 
 ## Prediction
+
 if st.button("Predict Fire Weather Index(FWI)"):
     ## Step 1 : Standard Scaling 
-    new_data_scaled_features = scaler_model.transform(features)
+    new_features_transformed = scaler.transform(features)
 
     # Step 2: Predict using ridge model
-    prediction = ridge_model.predict(new_data_scaled_features)
+    prediction = ridge.predict(new_features_transformed)
 
-    st.success(f"🌡️ Predicted Fire Weather Index (FWI): **{prediction[0]:.2f}**")
+    st.success(f"🌡️ Predicted Fire Weather Index (FWI): **{prediction}**")
 
 
