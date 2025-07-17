@@ -4,10 +4,7 @@ This end-to-end regression project applies Linear, Multiple, Ridge, Lasso, and E
 
 This project predicts the Fire Weather Index (FWI) for Algerian forest regions using various regression models. The application is built with Streamlit for interactive predictions and is deployed on Streamlit Community Cloud.
 
-## Credits
-### Huge Credit to Krish Naik Sir. This project was completed by following Krish Naik Sir’s comprehensive Udemy course on machine learning , DL , NLP .
-- **Instructor** - (https://github.com/krishnaik06)
-- **Dataset Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/547/algerian+forest+fires+dataset)
+**Dataset Source:** [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/547/algerian+forest+fires+dataset)
 
 
 ## Data Set Information
